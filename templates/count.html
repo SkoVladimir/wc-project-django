@@ -1,0 +1,13 @@
+<h1>COUNT</h1>
+
+<a href="{% url 'home' %}">Start Again</a>
+
+<h2>Your Text:</h2>
+{{ context }}
+<h2>Number of Words</h2>
+{{ count }}
+<h3>Most common words</h3>
+{% for word, counttotal in sortedwords %}
+    {{ word }} - {{ counttotal }}
+    <br/>
+{% endfor %}
